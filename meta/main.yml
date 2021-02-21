@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Upload key-pairs for the provisioning of Openstack VMs
@@ -5,9 +6,10 @@ galaxy_info:
   license: BSD
   min_ansible_version: 2.1
   platforms:
-  - name: EL
-    versions:
-    - 7
+    - name: EL
+      versions:
+        - 7
   galaxy_tags: []
+  role_name: openstack_idr_keypairs
 
 dependencies: []
