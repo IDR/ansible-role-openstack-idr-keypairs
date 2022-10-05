@@ -2,14 +2,14 @@
 # Tasks file for roles/openstack-idr-keypairs
 
 - name: idr keypair | upload openstack key
-  os_keypair:
+  openstack.cloud.keypair:
     name: "{{ idr_keypair_name | default('idr-deployment-key') }}"
     public_key: "{{ idr_keypair_keys | join('\n') }}"
     state: present
   when: idr_keypair_file is not defined
 
 - name: idr keypair | upload openstack key (by file)
-  os_keypair:
+  openstack.cloud.keypair:
     name: "{{ idr_keypair_name | default('idr-deployment-key') }}"
     public_key_file: "{{ idr_keypair_file }}"
     state: present
